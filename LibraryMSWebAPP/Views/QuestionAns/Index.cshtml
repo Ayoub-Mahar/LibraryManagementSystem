@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/js/QuestionAns.js"></script>
+    <style>
+        .container {
+            position: relative !important;
+            margin-top: 30px !important;
+        }
+
+        .table-responsive {
+            display: inline-table !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <h2>Question with Details</h2>
+            <table class="table table-bordered table-hover table-responsive" id="detailTable">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            Question Title
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="tbody" id="tbodyid">
+                </tbody>
+            </table>
+        </div>
+    </form>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Question With Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <strong for="Question-ID" class="col-form-label">Question ID:</strong>
+                            <span id="questionID"></span>
+                        </div>
+                        <div class="form-group">
+                            <strong for="title" class="col-form-label">Question Title:</strong>
+                            <span id="title"></span>
+                        </div>
+                        <div class="form-group">
+                            <strong for="name" class="col-form-label">Questioner Name:</strong>
+                            <span id="name"></span>
+                        </div>
+                        <div class="form-group">
+                            <strong for="is-answer" class="col-form-label">Is Answerd:</strong>
+                            <span id="isAnswer"></span>
+                        </div>
+                        <div class="form-group">
+                            <strong for="total-answer" class="col-form-label">Total Answer:</strong>
+                            <span id="total-answer"></span>
+                        </div>
+                        <div class="form-group">
+                            <strong for="total-view" class="col-form-label">Total View:</strong>
+                            <span id="total-view"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

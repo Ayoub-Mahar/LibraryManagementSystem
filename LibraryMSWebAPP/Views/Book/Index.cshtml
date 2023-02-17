@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/js/book.js"></script>
+    <style>
+        .container {
+            position : relative !important;
+            margin-top: 30px !important;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+
+            <div class="row">
+                <div class="form-group col-lg-3">
+                    <label>Main Category List</label>
+                    <select class="form-control" id="ddlMainCategory" onchange="FunctionMainCategory(this.value);">
+                        <option value="0" selected disabled>Select All</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-3 subCategory">
+                    <label>Sub-Category List</label>
+                    <select class="form-control" id="ddlSubCategory" onchange="FunctionSubCategory(this.value);">
+                        <option value="0" selected disabled>Select All</option>
+                    </select>
+                </div>
+            </div>
+            
+            <h2>Books Records</h2>   
+            <table class="table table-bordered table-hover" id="detailTable">
+                <thead>  
+                    <tr>  
+                        <th>  
+                            BookID  
+                        </th>  
+                        <th>  
+                            Book Title  
+                        </th>  
+                        <th>  
+                            Price  
+                        </th>  
+                        <th>  
+                            Edition  
+                        </th>  
+                        <th>  
+                            Auther Name  
+                        </th>  
+                        <th>  
+                            Availablity  
+                        </th>  
+                    </tr>  
+                </thead>  
+                <tbody class="tbody" id="tbodyid">
+                </tbody>  
+            </table>  
+        </div>  
+    </form>
+</body>
+</html>
+
